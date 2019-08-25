@@ -36,10 +36,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view)
             {
-                Intent i = new Intent(MainActivity.this, gameview.class);
-                startActivity(i);
-                MainActivity.this.finish();
-                System.out.println("helloayu1");
+                Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=com.guruas.mazegamej&hl=en"); // missing 'http://' will cause crashed
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
 
 
             }
